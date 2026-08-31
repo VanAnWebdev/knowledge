@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { BookOpen, Code, TerminalSquare } from "lucide-react";
+import { BookOpen, Code, TerminalSquare, Map } from "lucide-react";
 import { usePathname } from "next/navigation";
 
 export function Sidebar() {
@@ -23,6 +23,13 @@ export function Sidebar() {
         >
           <Code size={16} className={pathname === '/' ? "text-[#2496ED]" : ""} />
           Topics
+        </Link>
+        <Link 
+          href="/learn" 
+          className={`flex items-center gap-2 px-2 py-2 rounded-md font-medium transition-colors ${pathname === '/learn' ? 'bg-zinc-200 dark:bg-zinc-900/80 text-zinc-900 dark:text-zinc-100 border border-zinc-300 dark:border-zinc-800/50' : 'text-zinc-600 dark:text-zinc-400 hover:bg-zinc-200 dark:hover:bg-zinc-900/50 hover:text-zinc-900 dark:hover:text-zinc-200'}`}
+        >
+          <Map size={16} className={pathname === '/learn' ? "text-[#2496ED]" : ""} />
+          Roadmaps
         </Link>
         
         <div className="text-xs font-semibold text-zinc-500 uppercase tracking-wider mb-2 px-2 mt-6">DevOps</div>
