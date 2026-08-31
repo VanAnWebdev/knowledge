@@ -14,7 +14,7 @@ import {
 
 export default function DockerStudyTab() {
   return (
-    <div className="min-h-screen bg-zinc-950 text-zinc-300 font-sans selection:bg-[#2496ED] selection:text-white p-4 md:p-8 lg:p-12">
+    <div className="p-4 md:p-8 lg:p-12">
       <div className="max-w-5xl mx-auto space-y-16">
         
         {/* Header */}
