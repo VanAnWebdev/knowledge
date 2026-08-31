@@ -82,6 +82,7 @@ const ROADMAPS: Track[] = [
 export default function LearnPage() {
   const [completed, setCompleted] = useState<Record<string, boolean>>({});
   const [mounted, setMounted] = useState(false);
+  const [activeTrackId, setActiveTrackId] = useState(ROADMAPS[0].id);
 
   useEffect(() => {
     const saved = localStorage.getItem("roadmap-progress");
@@ -109,74 +110,88 @@ export default function LearnPage() {
     }));
   };
 
-  const getProgress = (track: Track) => {
-    const total = track.topics.length;
-    const finished = track.topics.filter(t => completed[`${track.id}-${t.id}`]).length;
-    return { total, finished, percentage: Math.round((finished / total) * 100) || 0 };
-  };
-
   if (!mounted) {
     return null; // Avoid hydration mismatch
   }
 
+  const activeTrack = ROADMAPS.find(t => t.id === activeTrackId) || ROADMAPS[0];
+
   return (
-    <div className="max-w-5xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
-      <div className="mb-10">
-        <h1 className="text-3xl font-bold text-zinc-900 dark:text-zinc-50 tracking-tight">Developer Roadmaps</h1>
-        <p className="mt-3 text-lg text-zinc-600 dark:text-zinc-400">
+    <div className="max-w-5xl mx-auto py-12 px-4 sm:px-6 lg:px-8 font-sans">
+      <div className="mb-12 text-center md:text-left">
+        <h1 className="text-4xl md:text-5xl font-black text-zinc-900 dark:text-zinc-50 tracking-tight">Developer Roadmaps</h1>
+        <p className="mt-4 text-lg text-zinc-600 dark:text-zinc-400 max-w-2xl">
           Step-by-step guides and paths to learn different technologies.
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {ROADMAPS.map((track) => {
-          const progress = getProgress(track);
+      {/* Tabs */}
+      <div className="flex flex-wrap gap-3 mb-16 pb-6 border-b-2 border-dashed border-zinc-200 dark:border-zinc-800">
+        {ROADMAPS.map(track => {
+          const isActive = activeTrackId === track.id;
           return (
-            <div key={track.id} className="bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 overflow-hidden shadow-sm flex flex-col">
-              <div className="p-6 border-b border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900/50">
-                <div className="flex justify-between items-start mb-2">
-                  <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-100">{track.title}</h2>
-                  <span className="inline-flex items-center rounded-full bg-blue-50 dark:bg-blue-500/10 px-2.5 py-0.5 text-xs font-medium text-blue-700 dark:text-blue-400">
-                    {progress.percentage}%
-                  </span>
-                </div>
-                <p className="text-sm text-zinc-500 dark:text-zinc-400 mb-4">{track.description}</p>
-                
-                <div className="w-full bg-zinc-200 dark:bg-zinc-800 rounded-full h-1.5">
-                  <div 
-                    className="bg-blue-600 dark:bg-blue-500 h-1.5 rounded-full transition-all duration-300"
-                    style={{ width: `${progress.percentage}%` }}
-                  />
-                </div>
-              </div>
-
-              <div className="p-4 flex-1">
-                <ul className="space-y-1">
-                  {track.topics.map((topic) => {
-                    const isCompleted = completed[`${track.id}-${topic.id}`];
-                    return (
-                      <li key={topic.id}>
-                        <button
-                          onClick={() => toggleTopic(track.id, topic.id)}
-                          className="w-full flex items-center gap-3 px-3 py-2.5 rounded-md hover:bg-zinc-100 dark:hover:bg-zinc-800/50 transition-colors text-left group"
-                        >
-                          {isCompleted ? (
-                            <CheckCircle2 className="w-5 h-5 text-green-500 shrink-0" />
-                          ) : (
-                            <Circle className="w-5 h-5 text-zinc-300 dark:text-zinc-600 group-hover:text-zinc-400 dark:group-hover:text-zinc-500 shrink-0" />
-                          )}
-                          <span className={`text-sm transition-all ${isCompleted ? 'text-zinc-400 dark:text-zinc-500 line-through' : 'text-zinc-700 dark:text-zinc-300 font-medium'}`}>
-                            {topic.name}
-                          </span>
-                        </button>
-                      </li>
-                    );
-                  })}
-                </ul>
-              </div>
-            </div>
+            <button
+              key={track.id}
+              onClick={() => setActiveTrackId(track.id)}
+              className={`px-5 py-2.5 rounded-xl font-bold text-sm transition-all border-2 ${
+                isActive 
+                  ? 'bg-zinc-900 text-zinc-50 border-zinc-900 shadow-[4px_4px_0px_0px_#18181b] dark:bg-zinc-100 dark:text-zinc-900 dark:border-zinc-100 dark:shadow-[4px_4px_0px_0px_#f4f4f5] -translate-y-1'
+                  : 'bg-white dark:bg-zinc-900/50 text-zinc-600 dark:text-zinc-400 border-zinc-200 dark:border-zinc-800 hover:border-zinc-900 hover:text-zinc-900 dark:hover:border-zinc-100 dark:hover:text-zinc-100 hover:shadow-[4px_4px_0px_0px_#18181b] dark:hover:shadow-[4px_4px_0px_0px_#f4f4f5] hover:-translate-y-1'
+              }`}
+            >
+              {track.title}
+            </button>
           );
         })}
+      </div>
+
+      {/* Flowchart */}
+      <div className="relative w-full max-w-4xl mx-auto">
+        {/* Vertical Center Line */}
+        <div className="absolute left-8 md:left-1/2 top-4 bottom-4 border-l-4 border-dashed border-zinc-300 dark:border-zinc-700 -translate-x-1/2 z-0" />
+        
+        <div className="flex flex-col gap-8 w-full py-4 relative z-10">
+          {activeTrack.topics.map((topic, index) => {
+            const isLeft = index % 2 === 0;
+            const isCompleted = completed[`${activeTrack.id}-${topic.id}`];
+
+            return (
+              <div key={topic.id} className="relative flex items-center w-full min-h-[64px]">
+                {/* Desktop: Alternate left/right. Mobile: all right. */}
+                <div className={`flex w-full ${isLeft ? 'md:justify-end' : 'md:ml-auto md:justify-start'} ml-16 md:ml-0 md:w-1/2 relative`}>
+                  
+                  {/* Node */}
+                  <div className={`relative z-10 w-full sm:w-72 ${isLeft ? 'md:mr-8' : 'md:ml-8'}`}>
+                    <button 
+                      onClick={() => toggleTopic(activeTrack.id, topic.id)}
+                      className={`group w-full p-4 flex items-center justify-between text-left font-bold rounded-xl border-2 transition-all 
+                        hover:-translate-x-1 hover:-translate-y-1 hover:shadow-[6px_6px_0px_0px_#18181b] dark:hover:shadow-[6px_6px_0px_0px_#f4f4f5]
+                        active:translate-x-1 active:translate-y-1 active:shadow-none dark:active:shadow-none
+                        ${isCompleted 
+                          ? 'bg-green-400 border-zinc-900 text-zinc-900 shadow-[4px_4px_0px_0px_#18181b] dark:bg-green-500 dark:border-zinc-100 dark:shadow-[4px_4px_0px_0px_#f4f4f5]' 
+                          : 'bg-yellow-300 border-zinc-900 text-zinc-900 shadow-[4px_4px_0px_0px_#18181b] dark:bg-yellow-400 dark:border-zinc-100 dark:shadow-[4px_4px_0px_0px_#f4f4f5]'
+                        }
+                      `}
+                    >
+                      <span className="truncate pr-3 text-[15px]">{topic.name}</span>
+                      {isCompleted ? (
+                        <CheckCircle2 className="w-6 h-6 shrink-0 text-zinc-900" />
+                      ) : (
+                        <Circle className="w-6 h-6 shrink-0 text-zinc-900/30 group-hover:text-zinc-900/60 transition-colors" />
+                      )}
+                    </button>
+                  </div>
+
+                  {/* Connection Line Desktop */}
+                  <div className={`hidden md:block absolute top-1/2 -translate-y-1/2 w-8 border-t-4 border-dashed border-zinc-300 dark:border-zinc-700 -z-10 ${isLeft ? 'right-0' : 'left-0'}`} />
+                </div>
+
+                {/* Connection Line Mobile */}
+                <div className="md:hidden absolute left-8 top-1/2 -translate-y-1/2 w-8 border-t-4 border-dashed border-zinc-300 dark:border-zinc-700 -z-10" />
+              </div>
+            );
+          })}
+        </div>
       </div>
     </div>
   );
