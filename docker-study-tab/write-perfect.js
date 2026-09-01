@@ -1,4 +1,7 @@
-export type Topic = {
+const fs = require('fs');
+const file = 'f:/self/knowledge/docker-study-tab/app/learn/data.ts';
+
+const content = `export type Topic = {
   id: string;
   name: string;
   subTopics?: { id: string; name: string }[];
@@ -575,3 +578,7 @@ export const ROADMAPS: Track[] = [
     ]
   }
 ];
+`;
+
+fs.writeFileSync(file, content);
+console.log('Successfully wrote data.ts with perfect image transcription');
