@@ -122,33 +122,14 @@ export const ROADMAPS: Track[] = [
         ]
       },
       {
-        id: "authentication",
-        name: "Authentication",
+        id: "security",
+        name: "Web Security Knowledge",
         subTopics: [
-          { id: "auth-1", name: "JWT" },
-          { id: "auth-2", name: "OAuth" },
-          { id: "auth-3", name: "Basic Authentication" },
-          { id: "auth-4", name: "Token Authentication" },
-          { id: "auth-5", name: "Cookie Based Auth" },
-          { id: "auth-6", name: "OpenID" },
-          { id: "auth-7", name: "SAML" }
-        ]
-      },
-      {
-        id: "web-security",
-        name: "Web Security",
-        subTopics: [
-          { id: "sec-1", name: "MD5" },
-          { id: "sec-2", name: "SHA" },
-          { id: "sec-3", name: "scrypt" },
-          { id: "sec-4", name: "bcrypt" },
-          { id: "sec-5", name: "HTTPS" },
-          { id: "sec-6", name: "OWASP Risks" },
-          { id: "sec-7", name: "CORS" },
-          { id: "sec-8", name: "SSL/TLS" },
-          { id: "sec-9", name: "CSP" },
-          { id: "sec-10", name: "Server Security" },
-          { id: "sec-11", name: "API Security Best Practices" }
+          { id: "sec-1", "name": "Hashing" },
+          { id: "sec-2", "name": "HTTPS" },
+          { id: "sec-3", "name": "CORS" },
+          { id: "sec-4", "name": "SSL/TLS" },
+          { id: "sec-5", "name": "OWASP" }
         ]
       },
       {
