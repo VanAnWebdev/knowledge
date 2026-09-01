@@ -4,11 +4,15 @@ import { useState, useEffect } from "react";
 import { CheckCircle2, Circle } from "lucide-react";
 
 import { ROADMAPS } from "./data";
+import NodeModal from "@/components/NodeModal";
 
 export default function LearnPage() {
   const [completed, setCompleted] = useState<Record<string, boolean>>({});
   const [mounted, setMounted] = useState(false);
   const [activeTrackId, setActiveTrackId] = useState(ROADMAPS[0].id);
+
+  // Modal State
+  const [selectedNode, setSelectedNode] = useState<{id: string, name: string} | null>(null);
 
   useEffect(() => {
     const saved = localStorage.getItem("roadmap-progress");
@@ -101,7 +105,7 @@ export default function LearnPage() {
                             return (
                               <div key={sub.id} className="relative flex items-center justify-end">
                                 <button
-                                  onClick={() => toggleTopic(activeTrack.id, sub.id)}
+                                  onClick={() => setSelectedNode(sub)}
                                   className={`group w-48 p-2.5 flex items-center justify-between text-left font-bold rounded-lg border-2 transition-all 
                                     hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[3px_3px_0px_0px_#18181b] dark:hover:shadow-[3px_3px_0px_0px_#f4f4f5]
                                     active:translate-x-0.5 active:translate-y-0.5 active:shadow-none dark:active:shadow-none
@@ -132,7 +136,7 @@ export default function LearnPage() {
                         <div className="absolute -right-8 top-1/2 w-8 border-t-4 border-dashed border-zinc-300 dark:border-zinc-700 -z-10"></div>
                         
                         <button 
-                          onClick={() => toggleTopic(activeTrack.id, topic.id)}
+                          onClick={() => setSelectedNode(topic)}
                           className={`group w-full p-4 flex items-center justify-between text-left font-bold rounded-xl border-2 transition-all 
                             hover:-translate-x-1 hover:-translate-y-1 hover:shadow-[6px_6px_0px_0px_#18181b] dark:hover:shadow-[6px_6px_0px_0px_#f4f4f5]
                             active:translate-x-1 active:translate-y-1 active:shadow-none dark:active:shadow-none
@@ -161,7 +165,7 @@ export default function LearnPage() {
                         <div className="absolute -left-8 top-1/2 w-8 border-t-4 border-dashed border-zinc-300 dark:border-zinc-700 -z-10"></div>
                         
                         <button 
-                          onClick={() => toggleTopic(activeTrack.id, topic.id)}
+                          onClick={() => setSelectedNode(topic)}
                           className={`group w-full p-4 flex items-center justify-between text-left font-bold rounded-xl border-2 transition-all 
                             hover:-translate-x-1 hover:-translate-y-1 hover:shadow-[6px_6px_0px_0px_#18181b] dark:hover:shadow-[6px_6px_0px_0px_#f4f4f5]
                             active:translate-x-1 active:translate-y-1 active:shadow-none dark:active:shadow-none
@@ -194,7 +198,7 @@ export default function LearnPage() {
                                 {/* Horizontal line to vertical spine */}
                                 <div className="w-4 border-t-4 border-dashed border-zinc-300 dark:border-zinc-700"></div>
                                 <button
-                                  onClick={() => toggleTopic(activeTrack.id, sub.id)}
+                                  onClick={() => setSelectedNode(sub)}
                                   className={`group w-48 p-2.5 flex items-center justify-between text-left font-bold rounded-lg border-2 transition-all 
                                     hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[3px_3px_0px_0px_#18181b] dark:hover:shadow-[3px_3px_0px_0px_#f4f4f5]
                                     active:translate-x-0.5 active:translate-y-0.5 active:shadow-none dark:active:shadow-none
@@ -229,7 +233,7 @@ export default function LearnPage() {
                     <div className="absolute -left-8 top-1/2 w-8 border-t-4 border-dashed border-zinc-300 dark:border-zinc-700 -z-10"></div>
                     
                     <button 
-                      onClick={() => toggleTopic(activeTrack.id, topic.id)}
+                      onClick={() => setSelectedNode(topic)}
                       className={`group w-full p-4 flex items-center justify-between text-left font-bold rounded-xl border-2 transition-all active:translate-x-1 active:translate-y-1 active:shadow-none dark:active:shadow-none ${
                         isCompleted 
                           ? 'bg-green-400 border-zinc-900 text-zinc-900 shadow-[4px_4px_0px_0px_#18181b] dark:bg-green-500 dark:border-zinc-100 dark:shadow-[4px_4px_0px_0px_#f4f4f5]' 
@@ -258,7 +262,7 @@ export default function LearnPage() {
                             {/* Horizontal line to vertical spine */}
                             <div className="w-4 border-t-4 border-dashed border-zinc-300 dark:border-zinc-700 -z-10"></div>
                             <button
-                              onClick={() => toggleTopic(activeTrack.id, sub.id)}
+                              onClick={() => setSelectedNode(sub)}
                               className={`group w-full p-2.5 flex items-center justify-between text-left font-bold rounded-lg border-2 transition-all active:translate-x-0.5 active:translate-y-0.5 active:shadow-none dark:active:shadow-none ${
                                 isSubCompleted 
                                   ? 'bg-green-300 border-zinc-900 text-zinc-900 shadow-[2px_2px_0px_0px_#18181b] dark:bg-green-400 dark:border-zinc-100 dark:shadow-[2px_2px_0px_0px_#f4f4f5]' 
@@ -284,6 +288,18 @@ export default function LearnPage() {
           })}
         </div>
       </div>
+
+      {selectedNode && (
+        <NodeModal
+          isOpen={!!selectedNode}
+          onClose={() => setSelectedNode(null)}
+          nodeId={selectedNode.id}
+          nodeName={selectedNode.name}
+          trackId={activeTrack.id}
+          isCompleted={!!completed[`${activeTrack.id}-${selectedNode.id}`]}
+          onToggleCompleted={() => toggleTopic(activeTrack.id, selectedNode.id)}
+        />
+      )}
     </div>
   );
 }
