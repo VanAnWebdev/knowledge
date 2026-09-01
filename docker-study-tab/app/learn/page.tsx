@@ -107,7 +107,7 @@ export default function LearnPage() {
                                     active:translate-x-0.5 active:translate-y-0.5 active:shadow-none dark:active:shadow-none
                                     ${isSubCompleted 
                                       ? 'bg-green-300 border-zinc-900 text-zinc-900 shadow-[2px_2px_0px_0px_#18181b] dark:bg-green-400 dark:border-zinc-100 dark:shadow-[2px_2px_0px_0px_#f4f4f5]' 
-                                      : 'bg-yellow-300 border-zinc-900 text-zinc-900 shadow-[2px_2px_0px_0px_#18181b] dark:bg-yellow-400 dark:border-zinc-100 dark:shadow-[2px_2px_0px_0px_#f4f4f5]'
+                                      : 'bg-yellow-100 border-zinc-900 text-zinc-900 shadow-[2px_2px_0px_0px_#18181b] dark:bg-yellow-200 dark:border-zinc-100 dark:shadow-[2px_2px_0px_0px_#f4f4f5]'
                                     }
                                   `}
                                 >
