@@ -4,213 +4,577 @@ export const ROADMAPS = [
     "title": "Java Core / Backend",
     "topics": [
       {
-        "topic": "Internet",
+        "id": "internet",
+        "name": "Internet",
         "subTopics": [
-          "How does the internet work?",
-          "What is HTTP?",
-          "Browsers and how they work?",
-          "DNS and how it works?",
-          "What is Domain Name?",
-          "What is hosting?"
+          {
+            "id": "how-does-the-internet-work",
+            "name": "How does the internet work?"
+          },
+          {
+            "id": "what-is-http",
+            "name": "What is HTTP?"
+          },
+          {
+            "id": "browsers-and-how-they-work",
+            "name": "Browsers and how they work?"
+          },
+          {
+            "id": "dns-and-how-it-works",
+            "name": "DNS and how it works?"
+          },
+          {
+            "id": "what-is-domain-name",
+            "name": "What is Domain Name?"
+          },
+          {
+            "id": "what-is-hosting",
+            "name": "What is hosting?"
+          }
         ]
       },
       {
-        "topic": "Basic Frontend Knowledge",
+        "id": "basic-frontend-knowledge",
+        "name": "Basic Frontend Knowledge",
         "subTopics": [
-          "HTML",
-          "CSS",
-          "JavaScript"
+          {
+            "id": "html",
+            "name": "HTML"
+          },
+          {
+            "id": "css",
+            "name": "CSS"
+          },
+          {
+            "id": "javascript",
+            "name": "JavaScript"
+          }
         ]
       },
       {
-        "topic": "OS and General Knowledge",
+        "id": "os-and-general-knowledge",
+        "name": "OS and General Knowledge",
         "subTopics": [
-          "Terminal Usage",
-          "How OSs work in General",
-          "Process Management",
-          "Threads and Concurrency",
-          "Basic Terminal Commands",
-          "Memory Management",
-          "Interprocess Communication",
-          "I/O Management",
-          "POSIX Basics",
-          "Basic Networking Concepts"
+          {
+            "id": "terminal-usage",
+            "name": "Terminal Usage"
+          },
+          {
+            "id": "how-oss-work-in-general",
+            "name": "How OSs work in General"
+          },
+          {
+            "id": "process-management",
+            "name": "Process Management"
+          },
+          {
+            "id": "threads-and-concurrency",
+            "name": "Threads and Concurrency"
+          },
+          {
+            "id": "basic-terminal-commands",
+            "name": "Basic Terminal Commands"
+          },
+          {
+            "id": "memory-management",
+            "name": "Memory Management"
+          },
+          {
+            "id": "interprocess-communication",
+            "name": "Interprocess Communication"
+          },
+          {
+            "id": "i-o-management",
+            "name": "I/O Management"
+          },
+          {
+            "id": "posix-basics",
+            "name": "POSIX Basics"
+          },
+          {
+            "id": "basic-networking-concepts",
+            "name": "Basic Networking Concepts"
+          }
         ]
       },
       {
-        "topic": "Learn a Language",
+        "id": "learn-a-language",
+        "name": "Learn a Language",
         "subTopics": [
-          "Python",
-          "Java",
-          "C#",
-          "PHP",
-          "Rust",
-          "Go",
-          "JavaScript",
-          "TypeScript",
-          "Ruby",
-          "C++"
+          {
+            "id": "python",
+            "name": "Python"
+          },
+          {
+            "id": "java",
+            "name": "Java"
+          },
+          {
+            "id": "c",
+            "name": "C#"
+          },
+          {
+            "id": "php",
+            "name": "PHP"
+          },
+          {
+            "id": "rust",
+            "name": "Rust"
+          },
+          {
+            "id": "go",
+            "name": "Go"
+          },
+          {
+            "id": "javascript",
+            "name": "JavaScript"
+          },
+          {
+            "id": "typescript",
+            "name": "TypeScript"
+          },
+          {
+            "id": "ruby",
+            "name": "Ruby"
+          },
+          {
+            "id": "c",
+            "name": "C++"
+          }
         ]
       },
       {
-        "topic": "Version Control Systems",
+        "id": "version-control-systems",
+        "name": "Version Control Systems",
         "subTopics": [
-          "Git",
-          "GitHub",
-          "GitLab",
-          "Bitbucket"
+          {
+            "id": "git",
+            "name": "Git"
+          },
+          {
+            "id": "github",
+            "name": "GitHub"
+          },
+          {
+            "id": "gitlab",
+            "name": "GitLab"
+          },
+          {
+            "id": "bitbucket",
+            "name": "Bitbucket"
+          }
         ]
       },
       {
-        "topic": "Relational Databases",
+        "id": "relational-databases",
+        "name": "Relational Databases",
         "subTopics": [
-          "PostgreSQL",
-          "MySQL",
-          "MariaDB",
-          "MS SQL",
-          "Oracle"
+          {
+            "id": "postgresql",
+            "name": "PostgreSQL"
+          },
+          {
+            "id": "mysql",
+            "name": "MySQL"
+          },
+          {
+            "id": "mariadb",
+            "name": "MariaDB"
+          },
+          {
+            "id": "ms-sql",
+            "name": "MS SQL"
+          },
+          {
+            "id": "oracle",
+            "name": "Oracle"
+          }
         ]
       },
       {
-        "topic": "NoSQL Databases",
+        "id": "nosql-databases",
+        "name": "NoSQL Databases",
         "subTopics": [
-          "MongoDB",
-          "Redis",
-          "Cassandra",
-          "CouchDB",
-          "DynamoDB",
-          "Neo4j",
-          "InfluxDB"
+          {
+            "id": "mongodb",
+            "name": "MongoDB"
+          },
+          {
+            "id": "redis",
+            "name": "Redis"
+          },
+          {
+            "id": "cassandra",
+            "name": "Cassandra"
+          },
+          {
+            "id": "couchdb",
+            "name": "CouchDB"
+          },
+          {
+            "id": "dynamodb",
+            "name": "DynamoDB"
+          },
+          {
+            "id": "neo4j",
+            "name": "Neo4j"
+          },
+          {
+            "id": "influxdb",
+            "name": "InfluxDB"
+          }
         ]
       },
       {
-        "topic": "More about Databases",
+        "id": "more-about-databases",
+        "name": "More about Databases",
         "subTopics": [
-          "ORMs",
-          "ACID",
-          "Transactions",
-          "N+1 Problem",
-          "Database Normalization",
-          "Indexes",
-          "Data Replication",
-          "Sharding",
-          "CAP Theorem"
+          {
+            "id": "orms",
+            "name": "ORMs"
+          },
+          {
+            "id": "acid",
+            "name": "ACID"
+          },
+          {
+            "id": "transactions",
+            "name": "Transactions"
+          },
+          {
+            "id": "n-1-problem",
+            "name": "N+1 Problem"
+          },
+          {
+            "id": "database-normalization",
+            "name": "Database Normalization"
+          },
+          {
+            "id": "indexes",
+            "name": "Indexes"
+          },
+          {
+            "id": "data-replication",
+            "name": "Data Replication"
+          },
+          {
+            "id": "sharding",
+            "name": "Sharding"
+          },
+          {
+            "id": "cap-theorem",
+            "name": "CAP Theorem"
+          }
         ]
       },
       {
-        "topic": "APIs",
+        "id": "apis",
+        "name": "APIs",
         "subTopics": [
-          "REST",
-          "JSON APIs",
-          "SOAP",
-          "gRPC",
-          "GraphQL",
-          "HATEOAS",
-          "OpenAPI",
-          "tRPC",
-          "WebSockets"
+          {
+            "id": "rest",
+            "name": "REST"
+          },
+          {
+            "id": "json-apis",
+            "name": "JSON APIs"
+          },
+          {
+            "id": "soap",
+            "name": "SOAP"
+          },
+          {
+            "id": "grpc",
+            "name": "gRPC"
+          },
+          {
+            "id": "graphql",
+            "name": "GraphQL"
+          },
+          {
+            "id": "hateoas",
+            "name": "HATEOAS"
+          },
+          {
+            "id": "openapi",
+            "name": "OpenAPI"
+          },
+          {
+            "id": "trpc",
+            "name": "tRPC"
+          },
+          {
+            "id": "websockets",
+            "name": "WebSockets"
+          }
         ]
       },
       {
-        "topic": "Caching",
+        "id": "caching",
+        "name": "Caching",
         "subTopics": [
-          "CDN",
-          "Server Side",
-          "Client Side",
-          "Redis",
-          "Memcached"
+          {
+            "id": "cdn",
+            "name": "CDN"
+          },
+          {
+            "id": "server-side",
+            "name": "Server Side"
+          },
+          {
+            "id": "client-side",
+            "name": "Client Side"
+          },
+          {
+            "id": "redis",
+            "name": "Redis"
+          },
+          {
+            "id": "memcached",
+            "name": "Memcached"
+          }
         ]
       },
       {
-        "topic": "Web Security Knowledge",
+        "id": "web-security-knowledge",
+        "name": "Web Security Knowledge",
         "subTopics": [
-          "HTTPS",
-          "CORS",
-          "Content Security Policy",
-          "OWASP Top 10",
-          "Hashing Algorithms",
-          "Authentication",
-          "JWT",
-          "OAuth",
-          "SSO"
+          {
+            "id": "https",
+            "name": "HTTPS"
+          },
+          {
+            "id": "cors",
+            "name": "CORS"
+          },
+          {
+            "id": "content-security-policy",
+            "name": "Content Security Policy"
+          },
+          {
+            "id": "owasp-top-10",
+            "name": "OWASP Top 10"
+          },
+          {
+            "id": "hashing-algorithms",
+            "name": "Hashing Algorithms"
+          },
+          {
+            "id": "authentication",
+            "name": "Authentication"
+          },
+          {
+            "id": "jwt",
+            "name": "JWT"
+          },
+          {
+            "id": "oauth",
+            "name": "OAuth"
+          },
+          {
+            "id": "sso",
+            "name": "SSO"
+          }
         ]
       },
       {
-        "topic": "Testing",
+        "id": "testing",
+        "name": "Testing",
         "subTopics": [
-          "Integration Testing",
-          "Unit Testing",
-          "Functional Testing",
-          "Mocking"
+          {
+            "id": "integration-testing",
+            "name": "Integration Testing"
+          },
+          {
+            "id": "unit-testing",
+            "name": "Unit Testing"
+          },
+          {
+            "id": "functional-testing",
+            "name": "Functional Testing"
+          },
+          {
+            "id": "mocking",
+            "name": "Mocking"
+          }
         ]
       },
       {
-        "topic": "CI/CD",
+        "id": "ci-cd",
+        "name": "CI/CD",
         "subTopics": [
-          "GitHub Actions",
-          "GitLab CI",
-          "Jenkins",
-          "Circle CI"
+          {
+            "id": "github-actions",
+            "name": "GitHub Actions"
+          },
+          {
+            "id": "gitlab-ci",
+            "name": "GitLab CI"
+          },
+          {
+            "id": "jenkins",
+            "name": "Jenkins"
+          },
+          {
+            "id": "circle-ci",
+            "name": "Circle CI"
+          }
         ]
       },
       {
-        "topic": "Design and Development Principles",
+        "id": "design-and-development-principles",
+        "name": "Design and Development Principles",
         "subTopics": [
-          "GOF Design Patterns",
-          "Domain Driven Design",
-          "Test Driven Development",
-          "SOLID",
-          "KISS",
-          "YAGNI",
-          "DRY"
+          {
+            "id": "gof-design-patterns",
+            "name": "GOF Design Patterns"
+          },
+          {
+            "id": "domain-driven-design",
+            "name": "Domain Driven Design"
+          },
+          {
+            "id": "test-driven-development",
+            "name": "Test Driven Development"
+          },
+          {
+            "id": "solid",
+            "name": "SOLID"
+          },
+          {
+            "id": "kiss",
+            "name": "KISS"
+          },
+          {
+            "id": "yagni",
+            "name": "YAGNI"
+          },
+          {
+            "id": "dry",
+            "name": "DRY"
+          }
         ]
       },
       {
-        "topic": "Architectural Patterns",
+        "id": "architectural-patterns",
+        "name": "Architectural Patterns",
         "subTopics": [
-          "Monolithic Apps",
-          "Microservices",
-          "SOA",
-          "CQRS",
-          "Event Sourcing",
-          "Serverless"
+          {
+            "id": "monolithic-apps",
+            "name": "Monolithic Apps"
+          },
+          {
+            "id": "microservices",
+            "name": "Microservices"
+          },
+          {
+            "id": "soa",
+            "name": "SOA"
+          },
+          {
+            "id": "cqrs",
+            "name": "CQRS"
+          },
+          {
+            "id": "event-sourcing",
+            "name": "Event Sourcing"
+          },
+          {
+            "id": "serverless",
+            "name": "Serverless"
+          }
         ]
       },
       {
-        "topic": "Search Engines",
+        "id": "search-engines",
+        "name": "Search Engines",
         "subTopics": [
-          "Elasticsearch",
-          "Solr",
-          "Typesense",
-          "Meilisearch"
+          {
+            "id": "elasticsearch",
+            "name": "Elasticsearch"
+          },
+          {
+            "id": "solr",
+            "name": "Solr"
+          },
+          {
+            "id": "typesense",
+            "name": "Typesense"
+          },
+          {
+            "id": "meilisearch",
+            "name": "Meilisearch"
+          }
         ]
       },
       {
-        "topic": "Message Brokers",
+        "id": "message-brokers",
+        "name": "Message Brokers",
         "subTopics": [
-          "RabbitMQ",
-          "Kafka",
-          "Amazon SQS",
-          "Amazon SNS",
-          "ActiveMQ"
+          {
+            "id": "rabbitmq",
+            "name": "RabbitMQ"
+          },
+          {
+            "id": "kafka",
+            "name": "Kafka"
+          },
+          {
+            "id": "amazon-sqs",
+            "name": "Amazon SQS"
+          },
+          {
+            "id": "amazon-sns",
+            "name": "Amazon SNS"
+          },
+          {
+            "id": "activemq",
+            "name": "ActiveMQ"
+          }
         ]
       },
       {
-        "topic": "Containerization and Virtualization",
+        "id": "containerization-and-virtualization",
+        "name": "Containerization and Virtualization",
         "subTopics": [
-          "Docker",
-          "Kubernetes",
-          "Podman"
+          {
+            "id": "docker",
+            "name": "Docker"
+          },
+          {
+            "id": "kubernetes",
+            "name": "Kubernetes"
+          },
+          {
+            "id": "podman",
+            "name": "Podman"
+          }
         ]
       },
       {
-        "topic": "Web Servers",
+        "id": "web-servers",
+        "name": "Web Servers",
         "subTopics": [
-          "Nginx",
-          "Apache",
-          "Caddy",
-          "Tomcat",
-          "IIS"
+          {
+            "id": "nginx",
+            "name": "Nginx"
+          },
+          {
+            "id": "apache",
+            "name": "Apache"
+          },
+          {
+            "id": "caddy",
+            "name": "Caddy"
+          },
+          {
+            "id": "tomcat",
+            "name": "Tomcat"
+          },
+          {
+            "id": "iis",
+            "name": "IIS"
+          }
         ]
       }
     ]
@@ -220,138 +584,361 @@ export const ROADMAPS = [
     "title": "Spring Boot",
     "topics": [
       {
-        "topic": "Pre-requisites",
+        "id": "pre-requisites",
+        "name": "Pre-requisites",
         "subTopics": [
-          "Java",
-          "SQL",
-          "Git",
-          "Maven / Gradle",
-          "Basic HTTP",
-          "IDE (IntelliJ, Eclipse)"
+          {
+            "id": "java",
+            "name": "Java"
+          },
+          {
+            "id": "sql",
+            "name": "SQL"
+          },
+          {
+            "id": "git",
+            "name": "Git"
+          },
+          {
+            "id": "maven-gradle",
+            "name": "Maven / Gradle"
+          },
+          {
+            "id": "basic-http",
+            "name": "Basic HTTP"
+          },
+          {
+            "id": "ide",
+            "name": "IDE"
+          }
         ]
       },
       {
-        "topic": "Spring Framework",
+        "id": "spring-framework",
+        "name": "Spring Framework",
         "subTopics": [
-          "Spring Core",
-          "Dependency Injection (DI)",
-          "Inversion of Control (IoC)",
-          "Spring AOP",
-          "Spring MVC",
-          "Spring Bean Scope",
-          "Annotations"
+          {
+            "id": "spring-core",
+            "name": "Spring Core"
+          },
+          {
+            "id": "dependency-injection",
+            "name": "Dependency Injection"
+          },
+          {
+            "id": "inversion-of-control",
+            "name": "Inversion of Control"
+          },
+          {
+            "id": "spring-aop",
+            "name": "Spring AOP"
+          },
+          {
+            "id": "spring-mvc",
+            "name": "Spring MVC"
+          },
+          {
+            "id": "spring-bean-scope",
+            "name": "Spring Bean Scope"
+          },
+          {
+            "id": "annotations",
+            "name": "Annotations"
+          }
         ]
       },
       {
-        "topic": "Spring Boot Basics",
+        "id": "spring-boot-basics",
+        "name": "Spring Boot Basics",
         "subTopics": [
-          "Introduction & Why Spring Boot",
-          "Auto-configuration",
-          "Spring Boot Starters",
-          "Actuator",
-          "Embedded Servers (Tomcat, Jetty, Undertow)"
+          {
+            "id": "introduction",
+            "name": "Introduction"
+          },
+          {
+            "id": "auto-configuration",
+            "name": "Auto-configuration"
+          },
+          {
+            "id": "spring-boot-starters",
+            "name": "Spring Boot Starters"
+          },
+          {
+            "id": "actuator",
+            "name": "Actuator"
+          },
+          {
+            "id": "embedded-servers",
+            "name": "Embedded Servers"
+          }
         ]
       },
       {
-        "topic": "Building RESTful APIs",
+        "id": "building-restful-apis",
+        "name": "Building RESTful APIs",
         "subTopics": [
-          "REST Principles",
-          "Spring Web",
-          "@RestController",
-          "@RequestMapping",
-          "@RequestBody",
-          "ResponseEntity",
-          "Content Negotiation"
+          {
+            "id": "rest-principles",
+            "name": "REST Principles"
+          },
+          {
+            "id": "spring-web",
+            "name": "Spring Web"
+          },
+          {
+            "id": "restcontroller",
+            "name": "@RestController"
+          },
+          {
+            "id": "requestmapping",
+            "name": "@RequestMapping"
+          },
+          {
+            "id": "requestbody",
+            "name": "@RequestBody"
+          },
+          {
+            "id": "responseentity",
+            "name": "ResponseEntity"
+          },
+          {
+            "id": "content-negotiation",
+            "name": "Content Negotiation"
+          }
         ]
       },
       {
-        "topic": "Data Access",
+        "id": "data-access",
+        "name": "Data Access",
         "subTopics": [
-          "Spring Data JPA",
-          "Hibernate",
-          "JDBC Template",
-          "Spring Data MongoDB",
-          "Database Migrations (Flyway, Liquibase)"
+          {
+            "id": "spring-data-jpa",
+            "name": "Spring Data JPA"
+          },
+          {
+            "id": "hibernate",
+            "name": "Hibernate"
+          },
+          {
+            "id": "jdbc-template",
+            "name": "JDBC Template"
+          },
+          {
+            "id": "spring-data-mongodb",
+            "name": "Spring Data MongoDB"
+          },
+          {
+            "id": "database-migrations",
+            "name": "Database Migrations"
+          }
         ]
       },
       {
-        "topic": "Validation & Exception Handling",
+        "id": "validation-exception-handling",
+        "name": "Validation & Exception Handling",
         "subTopics": [
-          "JSR 380 (Bean Validation)",
-          "@Valid / @Validated",
-          "@ControllerAdvice",
-          "@ExceptionHandler",
-          "Custom Exceptions"
+          {
+            "id": "jsr-380",
+            "name": "JSR 380"
+          },
+          {
+            "id": "valid-validated",
+            "name": "@Valid / @Validated"
+          },
+          {
+            "id": "controlleradvice",
+            "name": "@ControllerAdvice"
+          },
+          {
+            "id": "exceptionhandler",
+            "name": "@ExceptionHandler"
+          },
+          {
+            "id": "custom-exceptions",
+            "name": "Custom Exceptions"
+          }
         ]
       },
       {
-        "topic": "Spring Security",
+        "id": "spring-security",
+        "name": "Spring Security",
         "subTopics": [
-          "Authentication",
-          "Authorization",
-          "Security Filter Chain",
-          "JWT (JSON Web Tokens)",
-          "OAuth2 & OIDC",
-          "BCrypt",
-          "Role-based Access Control"
+          {
+            "id": "authentication",
+            "name": "Authentication"
+          },
+          {
+            "id": "authorization",
+            "name": "Authorization"
+          },
+          {
+            "id": "security-filter-chain",
+            "name": "Security Filter Chain"
+          },
+          {
+            "id": "jwt",
+            "name": "JWT"
+          },
+          {
+            "id": "oauth2-oidc",
+            "name": "OAuth2 & OIDC"
+          },
+          {
+            "id": "bcrypt",
+            "name": "BCrypt"
+          },
+          {
+            "id": "role-based-access-control",
+            "name": "Role-based Access Control"
+          }
         ]
       },
       {
-        "topic": "Caching",
+        "id": "caching",
+        "name": "Caching",
         "subTopics": [
-          "Spring Cache Abstraction",
-          "Redis",
-          "EhCache",
-          "Caffeine"
+          {
+            "id": "spring-cache-abstraction",
+            "name": "Spring Cache Abstraction"
+          },
+          {
+            "id": "redis",
+            "name": "Redis"
+          },
+          {
+            "id": "ehcache",
+            "name": "EhCache"
+          },
+          {
+            "id": "caffeine",
+            "name": "Caffeine"
+          }
         ]
       },
       {
-        "topic": "Messaging",
+        "id": "messaging",
+        "name": "Messaging",
         "subTopics": [
-          "Spring AMQP",
-          "RabbitMQ",
-          "Apache Kafka",
-          "JMS"
+          {
+            "id": "spring-amqp",
+            "name": "Spring AMQP"
+          },
+          {
+            "id": "rabbitmq",
+            "name": "RabbitMQ"
+          },
+          {
+            "id": "apache-kafka",
+            "name": "Apache Kafka"
+          },
+          {
+            "id": "jms",
+            "name": "JMS"
+          }
         ]
       },
       {
-        "topic": "Testing",
+        "id": "testing",
+        "name": "Testing",
         "subTopics": [
-          "JUnit 5",
-          "Mockito",
-          "Testcontainers",
-          "MockMvc",
-          "@SpringBootTest",
-          "@DataJpaTest"
+          {
+            "id": "junit-5",
+            "name": "JUnit 5"
+          },
+          {
+            "id": "mockito",
+            "name": "Mockito"
+          },
+          {
+            "id": "testcontainers",
+            "name": "Testcontainers"
+          },
+          {
+            "id": "mockmvc",
+            "name": "MockMvc"
+          },
+          {
+            "id": "springboottest",
+            "name": "@SpringBootTest"
+          },
+          {
+            "id": "datajpatest",
+            "name": "@DataJpaTest"
+          }
         ]
       },
       {
-        "topic": "Microservices",
+        "id": "microservices",
+        "name": "Microservices",
         "subTopics": [
-          "Spring Cloud",
-          "API Gateway",
-          "Service Discovery (Eureka)",
-          "Circuit Breaker (Resilience4j)",
-          "OpenFeign",
-          "Config Server"
+          {
+            "id": "spring-cloud",
+            "name": "Spring Cloud"
+          },
+          {
+            "id": "api-gateway",
+            "name": "API Gateway"
+          },
+          {
+            "id": "service-discovery",
+            "name": "Service Discovery"
+          },
+          {
+            "id": "circuit-breaker",
+            "name": "Circuit Breaker"
+          },
+          {
+            "id": "openfeign",
+            "name": "OpenFeign"
+          },
+          {
+            "id": "config-server",
+            "name": "Config Server"
+          }
         ]
       },
       {
-        "topic": "Observability",
+        "id": "observability",
+        "name": "Observability",
         "subTopics": [
-          "Micrometer",
-          "Distributed Tracing (Zipkin, Sleuth)",
-          "Prometheus",
-          "Grafana"
+          {
+            "id": "micrometer",
+            "name": "Micrometer"
+          },
+          {
+            "id": "distributed-tracing",
+            "name": "Distributed Tracing"
+          },
+          {
+            "id": "prometheus",
+            "name": "Prometheus"
+          },
+          {
+            "id": "grafana",
+            "name": "Grafana"
+          }
         ]
       },
       {
-        "topic": "Deployment",
+        "id": "deployment",
+        "name": "Deployment",
         "subTopics": [
-          "Docker",
-          "Docker Compose",
-          "Kubernetes",
-          "CI/CD Pipelines"
+          {
+            "id": "docker",
+            "name": "Docker"
+          },
+          {
+            "id": "docker-compose",
+            "name": "Docker Compose"
+          },
+          {
+            "id": "kubernetes",
+            "name": "Kubernetes"
+          },
+          {
+            "id": "ci-cd-pipelines",
+            "name": "CI/CD Pipelines"
+          }
         ]
       }
     ]
@@ -361,118 +948,309 @@ export const ROADMAPS = [
     "title": "AI Engineer",
     "topics": [
       {
-        "topic": "Programming Skills",
+        "id": "programming-skills",
+        "name": "Programming Skills",
         "subTopics": [
-          "Python",
-          "Bash",
-          "Jupyter Notebooks",
-          "Data Structures",
-          "Algorithms",
-          "Object Oriented Programming"
+          {
+            "id": "python",
+            "name": "Python"
+          },
+          {
+            "id": "bash",
+            "name": "Bash"
+          },
+          {
+            "id": "jupyter-notebooks",
+            "name": "Jupyter Notebooks"
+          },
+          {
+            "id": "data-structures",
+            "name": "Data Structures"
+          },
+          {
+            "id": "algorithms",
+            "name": "Algorithms"
+          },
+          {
+            "id": "object-oriented-programming",
+            "name": "Object Oriented Programming"
+          }
         ]
       },
       {
-        "topic": "Mathematics",
+        "id": "mathematics",
+        "name": "Mathematics",
         "subTopics": [
-          "Linear Algebra",
-          "Calculus",
-          "Statistics",
-          "Probability",
-          "Optimization"
+          {
+            "id": "linear-algebra",
+            "name": "Linear Algebra"
+          },
+          {
+            "id": "calculus",
+            "name": "Calculus"
+          },
+          {
+            "id": "statistics",
+            "name": "Statistics"
+          },
+          {
+            "id": "probability",
+            "name": "Probability"
+          },
+          {
+            "id": "optimization",
+            "name": "Optimization"
+          }
         ]
       },
       {
-        "topic": "Data Manipulation & Analysis",
+        "id": "data-manipulation-analysis",
+        "name": "Data Manipulation & Analysis",
         "subTopics": [
-          "Pandas",
-          "NumPy",
-          "SQL",
-          "Data Visualization (Matplotlib, Seaborn)",
-          "Data Cleaning",
-          "Feature Engineering"
+          {
+            "id": "pandas",
+            "name": "Pandas"
+          },
+          {
+            "id": "numpy",
+            "name": "NumPy"
+          },
+          {
+            "id": "sql",
+            "name": "SQL"
+          },
+          {
+            "id": "data-visualization",
+            "name": "Data Visualization"
+          },
+          {
+            "id": "data-cleaning",
+            "name": "Data Cleaning"
+          },
+          {
+            "id": "feature-engineering",
+            "name": "Feature Engineering"
+          }
         ]
       },
       {
-        "topic": "Machine Learning Algorithms",
+        "id": "machine-learning-algorithms",
+        "name": "Machine Learning Algorithms",
         "subTopics": [
-          "Linear Regression",
-          "Logistic Regression",
-          "Decision Trees",
-          "Random Forest",
-          "SVM",
-          "K-Means",
-          "PCA"
+          {
+            "id": "linear-regression",
+            "name": "Linear Regression"
+          },
+          {
+            "id": "logistic-regression",
+            "name": "Logistic Regression"
+          },
+          {
+            "id": "decision-trees",
+            "name": "Decision Trees"
+          },
+          {
+            "id": "random-forest",
+            "name": "Random Forest"
+          },
+          {
+            "id": "svm",
+            "name": "SVM"
+          },
+          {
+            "id": "k-means",
+            "name": "K-Means"
+          },
+          {
+            "id": "pca",
+            "name": "PCA"
+          }
         ]
       },
       {
-        "topic": "ML Frameworks",
+        "id": "ml-frameworks",
+        "name": "ML Frameworks",
         "subTopics": [
-          "Scikit-learn",
-          "XGBoost",
-          "LightGBM",
-          "CatBoost"
+          {
+            "id": "scikit-learn",
+            "name": "Scikit-learn"
+          },
+          {
+            "id": "xgboost",
+            "name": "XGBoost"
+          },
+          {
+            "id": "lightgbm",
+            "name": "LightGBM"
+          },
+          {
+            "id": "catboost",
+            "name": "CatBoost"
+          }
         ]
       },
       {
-        "topic": "Deep Learning",
+        "id": "deep-learning",
+        "name": "Deep Learning",
         "subTopics": [
-          "Neural Networks",
-          "PyTorch",
-          "TensorFlow",
-          "Keras",
-          "CNNs",
-          "RNNs",
-          "LSTMs",
-          "Autoencoders"
+          {
+            "id": "neural-networks",
+            "name": "Neural Networks"
+          },
+          {
+            "id": "pytorch",
+            "name": "PyTorch"
+          },
+          {
+            "id": "tensorflow",
+            "name": "TensorFlow"
+          },
+          {
+            "id": "keras",
+            "name": "Keras"
+          },
+          {
+            "id": "cnns",
+            "name": "CNNs"
+          },
+          {
+            "id": "rnns",
+            "name": "RNNs"
+          },
+          {
+            "id": "lstms",
+            "name": "LSTMs"
+          },
+          {
+            "id": "autoencoders",
+            "name": "Autoencoders"
+          }
         ]
       },
       {
-        "topic": "Natural Language Processing (NLP)",
+        "id": "natural-language-processing-nlp",
+        "name": "Natural Language Processing (NLP)",
         "subTopics": [
-          "Text Preprocessing",
-          "Word Embeddings (Word2Vec, GloVe)",
-          "Transformers",
-          "Attention Mechanism",
-          "HuggingFace"
+          {
+            "id": "text-preprocessing",
+            "name": "Text Preprocessing"
+          },
+          {
+            "id": "word-embeddings",
+            "name": "Word Embeddings"
+          },
+          {
+            "id": "transformers",
+            "name": "Transformers"
+          },
+          {
+            "id": "attention-mechanism",
+            "name": "Attention Mechanism"
+          },
+          {
+            "id": "huggingface",
+            "name": "HuggingFace"
+          }
         ]
       },
       {
-        "topic": "Computer Vision",
+        "id": "computer-vision",
+        "name": "Computer Vision",
         "subTopics": [
-          "Image Processing (OpenCV)",
-          "Object Detection (YOLO)",
-          "Image Segmentation",
-          "Face Recognition"
+          {
+            "id": "image-processing",
+            "name": "Image Processing"
+          },
+          {
+            "id": "object-detection",
+            "name": "Object Detection"
+          },
+          {
+            "id": "image-segmentation",
+            "name": "Image Segmentation"
+          },
+          {
+            "id": "face-recognition",
+            "name": "Face Recognition"
+          }
         ]
       },
       {
-        "topic": "Large Language Models (LLMs)",
+        "id": "large-language-models-llms",
+        "name": "Large Language Models (LLMs)",
         "subTopics": [
-          "Prompt Engineering",
-          "Fine-tuning (LoRA, QLoRA)",
-          "RAG (Retrieval-Augmented Generation)",
-          "Vector Databases (Pinecone, Milvus, Chroma)",
-          "Evaluation (ROUGE, BLEU)"
+          {
+            "id": "prompt-engineering",
+            "name": "Prompt Engineering"
+          },
+          {
+            "id": "fine-tuning",
+            "name": "Fine-tuning"
+          },
+          {
+            "id": "rag",
+            "name": "RAG"
+          },
+          {
+            "id": "vector-databases",
+            "name": "Vector Databases"
+          },
+          {
+            "id": "evaluation",
+            "name": "Evaluation"
+          }
         ]
       },
       {
-        "topic": "AI Frameworks",
+        "id": "ai-frameworks",
+        "name": "AI Frameworks",
         "subTopics": [
-          "LangChain",
-          "LlamaIndex",
-          "Semantic Kernel"
+          {
+            "id": "langchain",
+            "name": "LangChain"
+          },
+          {
+            "id": "llamaindex",
+            "name": "LlamaIndex"
+          },
+          {
+            "id": "semantic-kernel",
+            "name": "Semantic Kernel"
+          }
         ]
       },
       {
-        "topic": "MLOps & Deployment",
+        "id": "mlops-deployment",
+        "name": "MLOps & Deployment",
         "subTopics": [
-          "Docker",
-          "FastAPI / Flask",
-          "MLflow",
-          "Weights & Biases",
-          "Model Serving (Triton, TF Serving, TorchServe)",
-          "ONNX",
-          "Cloud AI (SageMaker, Vertex AI)"
+          {
+            "id": "docker",
+            "name": "Docker"
+          },
+          {
+            "id": "fastapi-flask",
+            "name": "FastAPI / Flask"
+          },
+          {
+            "id": "mlflow",
+            "name": "MLflow"
+          },
+          {
+            "id": "weights-biases",
+            "name": "Weights & Biases"
+          },
+          {
+            "id": "model-serving",
+            "name": "Model Serving"
+          },
+          {
+            "id": "onnx",
+            "name": "ONNX"
+          },
+          {
+            "id": "cloud-ai",
+            "name": "Cloud AI"
+          }
         ]
       }
     ]
@@ -482,156 +1260,427 @@ export const ROADMAPS = [
     "title": "DevOps",
     "topics": [
       {
-        "topic": "Learn a Programming Language",
+        "id": "learn-a-programming-language",
+        "name": "Learn a Programming Language",
         "subTopics": [
-          "Python",
-          "Go",
-          "Ruby",
-          "Rust",
-          "Node.js",
-          "C",
-          "C++"
+          {
+            "id": "python",
+            "name": "Python"
+          },
+          {
+            "id": "go",
+            "name": "Go"
+          },
+          {
+            "id": "ruby",
+            "name": "Ruby"
+          },
+          {
+            "id": "rust",
+            "name": "Rust"
+          },
+          {
+            "id": "node-js",
+            "name": "Node.js"
+          },
+          {
+            "id": "c",
+            "name": "C"
+          },
+          {
+            "id": "c",
+            "name": "C++"
+          }
         ]
       },
       {
-        "topic": "Understand different OS Concepts",
+        "id": "understand-different-os-concepts",
+        "name": "Understand different OS Concepts",
         "subTopics": [
-          "Process Management",
-          "Threads and Concurrency",
-          "Sockets",
-          "POSIX Basics",
-          "Networking Concepts",
-          "Init Systems",
-          "I/O Management",
-          "Virtualization",
-          "Memory/Storage",
-          "File Systems"
+          {
+            "id": "process-management",
+            "name": "Process Management"
+          },
+          {
+            "id": "threads-and-concurrency",
+            "name": "Threads and Concurrency"
+          },
+          {
+            "id": "sockets",
+            "name": "Sockets"
+          },
+          {
+            "id": "posix-basics",
+            "name": "POSIX Basics"
+          },
+          {
+            "id": "networking-concepts",
+            "name": "Networking Concepts"
+          },
+          {
+            "id": "init-systems",
+            "name": "Init Systems"
+          },
+          {
+            "id": "i-o-management",
+            "name": "I/O Management"
+          },
+          {
+            "id": "virtualization",
+            "name": "Virtualization"
+          },
+          {
+            "id": "memory-storage",
+            "name": "Memory/Storage"
+          },
+          {
+            "id": "file-systems",
+            "name": "File Systems"
+          }
         ]
       },
       {
-        "topic": "Version Control Systems",
+        "id": "version-control-systems",
+        "name": "Version Control Systems",
         "subTopics": [
-          "Git Basics",
-          "GitHub",
-          "GitLab",
-          "Bitbucket"
+          {
+            "id": "git-basics",
+            "name": "Git Basics"
+          },
+          {
+            "id": "github",
+            "name": "GitHub"
+          },
+          {
+            "id": "gitlab",
+            "name": "GitLab"
+          },
+          {
+            "id": "bitbucket",
+            "name": "Bitbucket"
+          }
         ]
       },
       {
-        "topic": "Learn to Live in Terminal",
+        "id": "learn-to-live-in-terminal",
+        "name": "Learn to Live in Terminal",
         "subTopics": [
-          "Bash Scripting",
-          "Text Manipulation tools",
-          "Vim / Nano",
-          "Process Monitoring",
-          "Network commands",
-          "System Performance",
-          "Compiling apps from source"
+          {
+            "id": "bash-scripting",
+            "name": "Bash Scripting"
+          },
+          {
+            "id": "text-manipulation-tools",
+            "name": "Text Manipulation tools"
+          },
+          {
+            "id": "vim-nano",
+            "name": "Vim / Nano"
+          },
+          {
+            "id": "process-monitoring",
+            "name": "Process Monitoring"
+          },
+          {
+            "id": "network-commands",
+            "name": "Network commands"
+          },
+          {
+            "id": "system-performance",
+            "name": "System Performance"
+          },
+          {
+            "id": "compiling-apps-from-source",
+            "name": "Compiling apps from source"
+          }
         ]
       },
       {
-        "topic": "Networking and Security",
+        "id": "networking-and-security",
+        "name": "Networking and Security",
         "subTopics": [
-          "DNS",
-          "OSI Model",
-          "HTTP / HTTPS",
-          "FTP",
-          "SSL / TLS",
-          "SSH",
-          "Port Forwarding",
-          "SMTP / IMAPS / POP3",
-          "IP Routing",
-          "Firewalls"
+          {
+            "id": "dns",
+            "name": "DNS"
+          },
+          {
+            "id": "osi-model",
+            "name": "OSI Model"
+          },
+          {
+            "id": "http-https",
+            "name": "HTTP / HTTPS"
+          },
+          {
+            "id": "ftp",
+            "name": "FTP"
+          },
+          {
+            "id": "ssl-tls",
+            "name": "SSL / TLS"
+          },
+          {
+            "id": "ssh",
+            "name": "SSH"
+          },
+          {
+            "id": "port-forwarding",
+            "name": "Port Forwarding"
+          },
+          {
+            "id": "smtp-imaps-pop3",
+            "name": "SMTP / IMAPS / POP3"
+          },
+          {
+            "id": "ip-routing",
+            "name": "IP Routing"
+          },
+          {
+            "id": "firewalls",
+            "name": "Firewalls"
+          }
         ]
       },
       {
-        "topic": "What is and how to setup a _____",
+        "id": "what-is-and-how-to-setup-a",
+        "name": "What is and how to setup a _____",
         "subTopics": [
-          "Reverse Proxy",
-          "Forward Proxy",
-          "Caching Server",
-          "Load Balancer",
-          "Firewall",
-          "Web Server (Nginx, Apache, Caddy, Tomcat)"
+          {
+            "id": "reverse-proxy",
+            "name": "Reverse Proxy"
+          },
+          {
+            "id": "forward-proxy",
+            "name": "Forward Proxy"
+          },
+          {
+            "id": "caching-server",
+            "name": "Caching Server"
+          },
+          {
+            "id": "load-balancer",
+            "name": "Load Balancer"
+          },
+          {
+            "id": "firewall",
+            "name": "Firewall"
+          },
+          {
+            "id": "web-server",
+            "name": "Web Server"
+          }
         ]
       },
       {
-        "topic": "Learn Infrastructure as Code",
+        "id": "learn-infrastructure-as-code",
+        "name": "Learn Infrastructure as Code",
         "subTopics": [
-          "Containers (Docker, Podman)",
-          "Container Orchestration (Kubernetes, Docker Swarm)",
-          "Infrastructure Provisioning (Terraform, AWS CloudFormation)",
-          "Configuration Management (Ansible, Chef, Puppet)",
-          "Service Mesh (Istio, Linkerd)"
+          {
+            "id": "containers",
+            "name": "Containers"
+          },
+          {
+            "id": "container-orchestration",
+            "name": "Container Orchestration"
+          },
+          {
+            "id": "infrastructure-provisioning",
+            "name": "Infrastructure Provisioning"
+          },
+          {
+            "id": "configuration-management",
+            "name": "Configuration Management"
+          },
+          {
+            "id": "service-mesh",
+            "name": "Service Mesh"
+          }
         ]
       },
       {
-        "topic": "CI/CD Tools",
+        "id": "ci-cd-tools",
+        "name": "CI/CD Tools",
         "subTopics": [
-          "GitHub Actions",
-          "GitLab CI",
-          "Jenkins",
-          "CircleCI",
-          "Azure DevOps",
-          "Travis CI",
-          "Bamboo",
-          "ArgoCD"
+          {
+            "id": "github-actions",
+            "name": "GitHub Actions"
+          },
+          {
+            "id": "gitlab-ci",
+            "name": "GitLab CI"
+          },
+          {
+            "id": "jenkins",
+            "name": "Jenkins"
+          },
+          {
+            "id": "circleci",
+            "name": "CircleCI"
+          },
+          {
+            "id": "azure-devops",
+            "name": "Azure DevOps"
+          },
+          {
+            "id": "travis-ci",
+            "name": "Travis CI"
+          },
+          {
+            "id": "bamboo",
+            "name": "Bamboo"
+          },
+          {
+            "id": "argocd",
+            "name": "ArgoCD"
+          }
         ]
       },
       {
-        "topic": "Infrastructure Monitoring",
+        "id": "infrastructure-monitoring",
+        "name": "Infrastructure Monitoring",
         "subTopics": [
-          "Prometheus",
-          "Grafana",
-          "Nagios",
-          "Zabbix",
-          "Datadog",
-          "Dynatrace",
-          "New Relic"
+          {
+            "id": "prometheus",
+            "name": "Prometheus"
+          },
+          {
+            "id": "grafana",
+            "name": "Grafana"
+          },
+          {
+            "id": "nagios",
+            "name": "Nagios"
+          },
+          {
+            "id": "zabbix",
+            "name": "Zabbix"
+          },
+          {
+            "id": "datadog",
+            "name": "Datadog"
+          },
+          {
+            "id": "dynatrace",
+            "name": "Dynatrace"
+          },
+          {
+            "id": "new-relic",
+            "name": "New Relic"
+          }
         ]
       },
       {
-        "topic": "Application Monitoring",
+        "id": "application-monitoring",
+        "name": "Application Monitoring",
         "subTopics": [
-          "Jaeger",
-          "New Relic",
-          "AppDynamics",
-          "Instana",
-          "OpenTelemetry"
+          {
+            "id": "jaeger",
+            "name": "Jaeger"
+          },
+          {
+            "id": "new-relic",
+            "name": "New Relic"
+          },
+          {
+            "id": "appdynamics",
+            "name": "AppDynamics"
+          },
+          {
+            "id": "instana",
+            "name": "Instana"
+          },
+          {
+            "id": "opentelemetry",
+            "name": "OpenTelemetry"
+          }
         ]
       },
       {
-        "topic": "Logs Management",
+        "id": "logs-management",
+        "name": "Logs Management",
         "subTopics": [
-          "Elastic Stack (ELK)",
-          "Graylog",
-          "Splunk",
-          "Papertrail",
-          "Fluentd",
-          "Loki"
+          {
+            "id": "elastic-stack",
+            "name": "Elastic Stack"
+          },
+          {
+            "id": "graylog",
+            "name": "Graylog"
+          },
+          {
+            "id": "splunk",
+            "name": "Splunk"
+          },
+          {
+            "id": "papertrail",
+            "name": "Papertrail"
+          },
+          {
+            "id": "fluentd",
+            "name": "Fluentd"
+          },
+          {
+            "id": "loki",
+            "name": "Loki"
+          }
         ]
       },
       {
-        "topic": "Cloud Providers",
+        "id": "cloud-providers",
+        "name": "Cloud Providers",
         "subTopics": [
-          "AWS",
-          "Azure",
-          "Google Cloud Platform (GCP)",
-          "DigitalOcean",
-          "Linode",
-          "Heroku",
-          "Alibaba Cloud"
+          {
+            "id": "aws",
+            "name": "AWS"
+          },
+          {
+            "id": "azure",
+            "name": "Azure"
+          },
+          {
+            "id": "google-cloud-platform",
+            "name": "Google Cloud Platform"
+          },
+          {
+            "id": "digitalocean",
+            "name": "DigitalOcean"
+          },
+          {
+            "id": "linode",
+            "name": "Linode"
+          },
+          {
+            "id": "heroku",
+            "name": "Heroku"
+          },
+          {
+            "id": "alibaba-cloud",
+            "name": "Alibaba Cloud"
+          }
         ]
       },
       {
-        "topic": "Cloud Design Patterns",
+        "id": "cloud-design-patterns",
+        "name": "Cloud Design Patterns",
         "subTopics": [
-          "Availability",
-          "Data Management",
-          "Design and Implementation",
-          "Management and Monitoring"
+          {
+            "id": "availability",
+            "name": "Availability"
+          },
+          {
+            "id": "data-management",
+            "name": "Data Management"
+          },
+          {
+            "id": "design-and-implementation",
+            "name": "Design and Implementation"
+          },
+          {
+            "id": "management-and-monitoring",
+            "name": "Management and Monitoring"
+          }
         ]
       }
     ]
   }
-];\n
+];
