@@ -250,15 +250,51 @@ export const ROADMAPS: Track[] = [
     title: "Spring Boot",
     description: "Master the Spring framework ecosystem.",
     topics: [
-      { id: "java-basics", name: "Java Basics" },
-      { id: "build", name: "Build Tools", subTopics: [{id:"sb-1", name:"Maven"}, {id:"sb-2", name:"Gradle"}] },
-      { id: "spring-core", name: "Spring Framework" },
-      { id: "spring-boot", name: "Spring Boot" },
-      { id: "spring-sec", name: "Spring Security" },
-      { id: "testing", name: "Testing" },
-      { id: "spring-data", name: "Spring Data" },
-      { id: "hibernate", name: "Hibernate & JPA" },
-      { id: "microservices", name: "Microservices & Cloud" },
+      { id: "java-basics", name: "Introduction", subTopics: [] },
+      { id: "spring-sec", name: "Spring Security", subTopics: [
+        { id: "ss-1", name: "Authentication" },
+        { id: "ss-2", name: "Authorization" },
+        { id: "ss-3", name: "OAuth2" },
+        { id: "ss-4", name: "JWT Authentication" }
+      ]},
+      { id: "spring-boot", name: "Spring Boot", subTopics: [
+        { id: "sb-1", name: "Spring Boot Starters" },
+        { id: "sb-2", name: "Auto-configuration" },
+        { id: "sb-3", name: "Actuators" },
+        { id: "sb-4", name: "Embedded Server" }
+      ]},
+      { id: "microservices", name: "Microservices", subTopics: [
+        { id: "ms-1", name: "Spring Cloud Gateway" },
+        { id: "ms-2", name: "Cloud Config" },
+        { id: "ms-3", name: "Spring Cloud Circuit Breaker" }
+      ]},
+      { id: "spring-mvc", name: "Spring MVC", subTopics: [
+        { id: "mvc-1", name: "Servlets" },
+        { id: "mvc-2", name: "JSP Files" },
+        { id: "mvc-3", name: "Architecture" },
+        { id: "mvc-4", name: "Components" }
+      ]},
+      { id: "testing", name: "Testing", subTopics: [
+        { id: "test-1", name: "JPA Test" },
+        { id: "test-2", name: "Mock MVC" },
+        { id: "test-3", name: "SpringBootTest Annotation" },
+        { id: "test-4", name: "Testcontainers Annotation" }
+      ]},
+      { id: "spring-data", name: "Spring Data", subTopics: [
+        { id: "sd-1", name: "Spring Data JPA" },
+        { id: "sd-2", name: "Spring Data MongoDB" },
+        { id: "sd-3", name: "Spring Data JDBC" }
+      ]},
+      { id: "hibernate", name: "Hibernate", subTopics: [
+        { id: "hib-1", name: "Transactions" },
+        { id: "hib-2", name: "Relationships" },
+        { id: "hib-3", name: "Entity Lifecycle" }
+      ]},
+      { id: "spring-cloud", name: "Spring Cloud", subTopics: [
+        { id: "sc-1", name: "Spring Cloud Open Feign" },
+        { id: "sc-2", name: "Micrometer" },
+        { id: "sc-3", name: "Zipkin" }
+      ]}
     ]
   },
   {
@@ -266,15 +302,58 @@ export const ROADMAPS: Track[] = [
     title: "AI Engineering",
     description: "From data science to building intelligent AI systems.",
     topics: [
-      { id: "python", name: "Programming (Python)" },
-      { id: "math", name: "Mathematics" },
-      { id: "data-prep", name: "Data Preprocessing" },
-      { id: "ml", name: "Machine Learning" },
-      { id: "dl", name: "Deep Learning" },
-      { id: "cv", name: "Computer Vision" },
-      { id: "nlp", name: "NLP" },
-      { id: "llms", name: "Large Language Models" },
-      { id: "mlops", name: "MLOps" }
+      { id: "python", name: "Programming", subTopics: [
+        { id: "py-1", name: "Python" }
+      ]},
+      { id: "math", name: "Mathematics", subTopics: [
+        { id: "m-1", name: "Linear Algebra" },
+        { id: "m-2", name: "Calculus" },
+        { id: "m-3", name: "Probability & Statistics" }
+      ]},
+      { id: "data-prep", name: "Data Preprocessing", subTopics: [
+        { id: "dp-1", name: "Pandas" },
+        { id: "dp-2", name: "NumPy" },
+        { id: "dp-3", name: "Scikit-Learn" },
+        { id: "dp-4", name: "Feature Engineering" },
+        { id: "dp-5", name: "Data Visualization" }
+      ]},
+      { id: "ml", name: "Machine Learning", subTopics: [
+        { id: "ml-1", name: "Supervised Learning" },
+        { id: "ml-2", name: "Unsupervised Learning" },
+        { id: "ml-3", name: "Ensemble Methods" }
+      ]},
+      { id: "dl", name: "Deep Learning", subTopics: [
+        { id: "dl-1", name: "Neural Networks" },
+        { id: "dl-2", name: "PyTorch" },
+        { id: "dl-3", name: "TensorFlow" },
+        { id: "dl-4", name: "Keras" }
+      ]},
+      { id: "cv", name: "Computer Vision", subTopics: [
+        { id: "cv-1", name: "OpenCV" },
+        { id: "cv-2", name: "CNNs" },
+        { id: "cv-3", name: "Object Detection" },
+        { id: "cv-4", name: "Image Segmentation" }
+      ]},
+      { id: "nlp", name: "NLP", subTopics: [
+        { id: "nlp-1", name: "Tokenization" },
+        { id: "nlp-2", name: "Word Embeddings" },
+        { id: "nlp-3", name: "Transformers" },
+        { id: "nlp-4", name: "Hugging Face" }
+      ]},
+      { id: "llms", name: "LLMs & GenAI", subTopics: [
+        { id: "llm-1", name: "Prompt Engineering" },
+        { id: "llm-2", name: "RAG" },
+        { id: "llm-3", name: "Fine-tuning" },
+        { id: "llm-4", name: "LangChain" },
+        { id: "llm-5", name: "LlamaIndex" }
+      ]},
+      { id: "mlops", name: "MLOps", subTopics: [
+        { id: "mo-1", name: "Model Deployment" },
+        { id: "mo-2", name: "Docker" },
+        { id: "mo-3", name: "Kubernetes" },
+        { id: "mo-4", name: "MLflow" },
+        { id: "mo-5", name: "CI/CD for ML" }
+      ]}
     ]
   },
   {
@@ -282,17 +361,69 @@ export const ROADMAPS: Track[] = [
     title: "DevOps",
     description: "Automate, deploy, and monitor scalable infrastructure.",
     topics: [
-      { id: "language", name: "Programming Language" },
-      { id: "os-concepts", name: "OS Concepts" },
-      { id: "terminal", name: "Learn to live in terminal" },
-      { id: "net-sec", name: "Networking & Security" },
-      { id: "server", name: "Server Setup" },
-      { id: "iac", name: "Infrastructure as Code" },
-      { id: "containers", name: "Containers & Orchestration" },
-      { id: "cicd", name: "CI/CD Tools" },
-      { id: "monitoring", name: "Monitoring & Observability" },
-      { id: "cloud", name: "Cloud Providers" },
-      { id: "patterns", name: "Cloud Design Patterns" }
+      { id: "language", name: "Programming Language", subTopics: [
+        { id: "pl-1", name: "Go" },
+        { id: "pl-2", name: "Python" },
+        { id: "pl-3", name: "Rust" },
+        { id: "pl-4", name: "Ruby" },
+        { id: "pl-5", name: "C/C++" }
+      ]},
+      { id: "os-concepts", name: "OS Concepts", subTopics: [
+        { id: "oc-1", name: "Process Management" },
+        { id: "oc-2", name: "Threads" },
+        { id: "oc-3", name: "Sockets" },
+        { id: "oc-4", name: "I/O Management" },
+        { id: "oc-5", name: "Virtualization" },
+        { id: "oc-6", name: "File Systems" }
+      ]},
+      { id: "terminal", name: "Learn to live in terminal", subTopics: [
+        { id: "term-1", name: "Bash Scripting" },
+        { id: "term-2", name: "Text Manipulation" },
+        { id: "term-3", name: "Process Monitoring" },
+        { id: "term-4", name: "Network Tools" }
+      ]},
+      { id: "net-sec", name: "Networking & Security", subTopics: [
+        { id: "ns-1", name: "DNS" },
+        { id: "ns-2", name: "OSI Model" },
+        { id: "ns-3", name: "HTTP/HTTPS" },
+        { id: "ns-4", name: "FTP" },
+        { id: "ns-5", name: "SSL/TLS" },
+        { id: "ns-6", name: "SSH" }
+      ]},
+      { id: "server", name: "Server Setup", subTopics: [
+        { id: "srv-1", name: "Reverse Proxy" },
+        { id: "srv-2", name: "Caching Server" },
+        { id: "srv-3", name: "Load Balancer" },
+        { id: "srv-4", name: "Firewall" },
+        { id: "srv-5", name: "Web Server" }
+      ]},
+      { id: "iac", name: "Infrastructure as Code", subTopics: [
+        { id: "iac-1", name: "Containers" },
+        { id: "iac-2", name: "Configuration Management" },
+        { id: "iac-3", name: "Container Orchestration" },
+        { id: "iac-4", name: "Infrastructure Provisioning" }
+      ]},
+      { id: "cicd", name: "CI/CD Tools", subTopics: [
+        { id: "ci-1", name: "GitHub Actions" },
+        { id: "ci-2", name: "GitLab CI" },
+        { id: "ci-3", name: "Jenkins" }
+      ]},
+      { id: "monitoring", name: "Monitoring & Observability", subTopics: [
+        { id: "mon-1", name: "Prometheus" },
+        { id: "mon-2", name: "Grafana" },
+        { id: "mon-3", name: "Datadog" },
+        { id: "mon-4", name: "ELK Stack" }
+      ]},
+      { id: "cloud", name: "Cloud Providers", subTopics: [
+        { id: "cl-1", name: "AWS" },
+        { id: "cl-2", name: "Google Cloud" },
+        { id: "cl-3", name: "Azure" }
+      ]},
+      { id: "patterns", name: "Cloud Design Patterns", subTopics: [
+        { id: "pat-1", name: "Availability" },
+        { id: "pat-2", name: "Data Management" },
+        { id: "pat-3", name: "Design and Implementation" }
+      ]}
     ]
   }
 ];
